@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<HTml>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+  </head>
+  <body>
+    <div style="background-color: rgb(226, 154, 154); display: flex; gap: 10px; height: 200px; width: 300px; justify-content:center;  align-items:start; flex-direction: column;">
+      <div>
+        <h2>Adults Plain Cotton T-shirt</h2>
+        <p>Price: $7.99</p>
+      </div>
+      <div>
+        <button style="background-color: yellow;" onclick="addToCart()">Add to cart</button>
+        <button style="background-color: orange;" onclick="buyNow()">Buy now</button>
+
+        <button style="background-color: rgb(81, 111, 119);" onclick="cartQuantity += 4; console.log(`Cart Quantity: ${cartQuantity}`);">+4 </button>
+
+        <button style="background-color: rgb(211, 182, 233);" onclick="cartQuantity += 5; console.log(`Cart Quantity: ${cartQuantity}`);">+5</button>
+
+        
+        <button style="background-color: rgb(66, 188, 192); margin-top: 5px;" onclick="cartQuantity -- ; console.log(`Cart Quantity: ${cartQuantity}`);">remove from Cart</button>
+
+        
+        <button style="background-color: rgb(144, 20, 238); margin-top: 5px;" onclick="cartQuantity -= 2; console.log(`Cart Quantity: ${cartQuantity}`);">-2</button>
+
+        <button style="background-color: rgb(144, 20, 238); margin-top: 5px;" onclick="cartQuantity -= 3; console.log(`Cart Quantity: ${cartQuantity}`);">-3</button>
+
+      </div>
+
+    </div>
+  </body>
+  <script>
+      let name = "Benedikt Ooko";
+      let cartQuantity = 0;
+    
+      // 5b: Display the message "My name is: ${name}" in the console
+      console.log(`My name is: ${name}`);
+
+      // 5c: Calculate the total cost of the restaurant order
+      let coffee = 5;
+      let bagels = 3 * 2;
+      let soup = 9;
+      let cost = coffee + bagels + soup;
+
+      // 5d: Display 'Cost of food: $${cost}' in the console
+      console.log(`Cost of food: $${cost}`);
+
+      // 5e: Calculate the tax (10% of cost) and save it in a variable
+      let tax = cost * 0.1;
+
+      // Display the tax in the console
+      console.log(`Tax: $${tax}`);
+      console.log(`Tax (10%):$${tax}`)
+
+      let totalCost = (cost + tax)
+      console.log(`Total cost: $${totalCost}`)
+      function addToCart() {
+          alert('Added');
+        }
+
+      function buyNow() {
+          console.log('Loading...');
+          alert('Purchased');
+      }
+  </script>
+</HTml>
