@@ -16,6 +16,13 @@
 
     <button onclick=" console.log(pickComputerMove()); playGame('Scissors');
     ">Scissors</button>
+
+    <button onclick="
+      score.wins=0,
+      score.losses=0,
+      score.ties=0
+      localStorage.removeItem('score')
+        ">Reset Score</button>
   </body>
   <script>
   /*--Precedence--
@@ -28,6 +35,30 @@
    naming conflicts
    var do't follow ther rule of scope
    */
+
+
+   // const score = {
+     // wins: 0,
+   //   losses: 0,
+    //  ties: 0
+   // }
+   //converting back to object we use parse.
+    let score =JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      losses: 0,
+      ties: 0
+    };
+
+   /* if (score === null){
+      
+      score = {
+        wins: 0,
+        losses: 0,
+        ties: 0
+    }
+    }*/
+    //console.log(localStorage.getItem('score'));
+    //get string out of local storage
     function playGame(playerMove){
       
       let reult = '';
@@ -58,7 +89,20 @@
           result = 'You lose';
         }
     }
-      alert(`You picked ${playerMove}. The computer picked ${computerChoice}. ${result}`);
+
+    if (result === "You win"){
+      score.win += 1;
+    } else if (result === "You lose"){
+      score.losses += 1;
+    } else if(result === "Tie"){
+      score.ties += 1;
+    }
+
+    localStorage.setItem('score',JSON.stringify(score));
+
+      alert(`You picked ${playerMove}. The computer picked ${computerChoice}. ${result}
+wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.ties}`
+      );
 }
 
     function pickComputerMove(){

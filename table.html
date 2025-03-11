@@ -1,0 +1,43 @@
+<table cellpadding="0" cellspacing="0" border="0">
+  <tbody>
+    <tr>
+      <td>
+          <select id="view" name="view">
+                                                          <option value="totalrequests">Total Requests</option>
+                                                          <option value="uniquedomains" selected="selected">Total Unique Domains</option>
+                                                          <option value="uniqueips">Unique IPs</option>
+                                                          <option value="topdomains">Domains</option>
+                                                          <option value="blockeddomains">Blocked Domains</option>
+                                                          <option value="requesttypes">Request Types</option>
+                                                      </select>
+      </td>
+      <td>&nbsp;for&nbsp;</td>
+      <td>
+        <select id="network_id" name="network_id" class="" style="width: 220px">
+          <option value="all">Personal Networks</option>
+          <option value="604634994">&nbsp;&nbsp;&nbsp;&nbsp;Efibre (Inactive)</option>
+          <option value="647437521" selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;Kewi.Network (197.138.11.254)</option>
+      </select>
+  </td>
+      <td class="multi-day" style="display: none;">&nbsp;from&nbsp;</td>
+      <td class="one-day" style="display: table-cell;">&nbsp;on&nbsp;</td>
+      <td>
+                  
+  
+  <input type="text" id="dt1" name="dt1" value="2025-02-25" class="datepicker hasDatepicker" size="10">
+  
+      </td>
+      <td class="multi-day" style="display: none;">&nbsp;to&nbsp;</td>
+      <td class="multi-day" style="display: none;">
+                  
+  
+  <input type="text" id="dt2" name="dt2" value="2025-02-25" class="datepicker hasDatepicker" size="10">
+  
+      </td>
+      <td class="multi-day" style="display: none;">&nbsp;or&nbsp;<a href="#">choose&nbsp;a&nbsp;single&nbsp;day</a></td>
+      <td class="one-day" style="display: table-cell;">&nbsp;or&nbsp;<a href="#">choose&nbsp;a&nbsp;range&nbsp;of&nbsp;days</a></td>
+      <td width="100%">&nbsp;</td>
+      <td><input type="button" class="ajaxbutton nav-submit-button" value="Apply"></td>
+  </tr>
+  </tbody>
+</table>
